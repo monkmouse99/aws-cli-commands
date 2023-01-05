@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: 'AWS::Serverless-2016-10-31'
+Description: 'Creates simple function and API resource'
+Resources:
+    LambdaFunctionWithAPI:
+      Type: AWS::Serverless::Function
+      Properties:
+        Handler: index.handler
+        Runtime: nodejs12.x
+        Policies:
+        Events:
+          HttpPost:
+            Type: Api
+            Properties:
+              Path: '/greeting'
+              Method: get

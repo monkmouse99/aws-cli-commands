@@ -1,0 +1,10 @@
+{
+    "operation": "create",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "Sarah",
+            "number": 6
+        }
+    }
+}
